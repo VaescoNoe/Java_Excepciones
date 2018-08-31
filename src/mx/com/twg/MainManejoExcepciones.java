@@ -9,10 +9,10 @@ public class MainManejoExcepciones {
 		
 		AccesoDatos datos = new ImplementacionMySql();
 		
-		datos.setSimularError(false);
+		datos.setSimularError(true);
 		ejecutar(datos,"listar");
 		
-		datos.setSimularError(false);
+		datos.setSimularError(true);
 		ejecutar(datos,"insertar");
 	}
 	
@@ -24,9 +24,6 @@ public class MainManejoExcepciones {
 			}catch(LecturaDatosExc e) {
 				System.out.println("Error lectura: Procesa la exception más especifica de lectura de datos\n");
 				e.printStackTrace();
-			}catch(AccesoDatosExc ei) {
-				System.out.println("Error acceso a datos: Procesa la exception más generica de acceso a datos\n");
-				ei.printStackTrace();
 			}catch(Exception a) {
 				System.out.println("Error general\n");
 				a.printStackTrace();
@@ -38,9 +35,6 @@ public class MainManejoExcepciones {
 			
 			try {
 				datos.insertar();
-			}catch(EscrituraDatosExc e) {
-				System.out.println("Error escritura: Procesa la exception más especifica de lectura de datos\n");
-				e.printStackTrace();
 			}catch(AccesoDatosExc ei) {
 				System.out.println("Error acceso datos: Podemos procesar solo la exception más generica\n");
 				ei.printStackTrace();
