@@ -29,9 +29,8 @@ public class ImplementacionMySql implements AccesoDatos {
 	}
 
 	@Override
-	public void simularError(boolean simularError) {
+	public void setSimularError(boolean simularError) {
 		this.simularError=simularError;
-
 	}
 
 }

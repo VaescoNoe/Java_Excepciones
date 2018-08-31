@@ -8,5 +8,5 @@ public interface AccesoDatos {
 	
 	public abstract void listar() throws AccesoDatosExc;
 	
-	public abstract void simularError(boolean simularError);
+	public abstract void setSimularError(boolean simularError);
 }

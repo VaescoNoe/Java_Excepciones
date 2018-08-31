@@ -9,10 +9,10 @@ public class MainManejoExcepciones {
 		
 		AccesoDatos datos = new ImplementacionMySql();
 		
-		datos.simularError(false);
+		datos.setSimularError(false);
 		ejecutar(datos,"listar");
 		
-		datos.simularError(true);
+		datos.setSimularError(false);
 		ejecutar(datos,"insertar");
 	}
 	
@@ -49,7 +49,7 @@ public class MainManejoExcepciones {
 			}
 			
 		}else {
-			System.out.println("No se proporciono ninguna acción ");
+			System.out.println("No se proporciono ninguna acción");
 		}
 	}
 	
